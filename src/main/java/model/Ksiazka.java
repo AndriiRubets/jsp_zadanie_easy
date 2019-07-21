@@ -27,7 +27,7 @@ public class Ksiazka implements IBaseEntity{
     private Wydawnictwo wydawnictwo;
 
     @ManyToOne
-    private Autor autor;
+    private Author author;
 
 
 }

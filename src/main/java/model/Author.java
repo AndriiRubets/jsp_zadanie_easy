@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Autor implements IBaseEntity {
+public class Author implements IBaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -23,7 +23,7 @@ public class Autor implements IBaseEntity {
     private LocalDateTime rok_urodzenia;
     private String miejsce_urodzenia;
 
-    @OneToMany(mappedBy = "autor", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private Set<Ksiazka> ksiazkaSet;
 }

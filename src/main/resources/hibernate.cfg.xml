@@ -11,7 +11,7 @@
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
         <!---->
-        <mapping class="model.Autor"/>
+        <mapping class="model.Author"/>
         <mapping class="model.Ksiazka"/>
         <mapping class="model.Wydawnictwo"/>
     </session-factory>
