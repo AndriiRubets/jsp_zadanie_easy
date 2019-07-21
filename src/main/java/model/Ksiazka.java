@@ -29,4 +29,5 @@ public class Ksiazka implements IBaseEntity{
     @ManyToOne
     private Autor autor;
 
+
 }

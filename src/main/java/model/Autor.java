@@ -3,11 +3,9 @@ package model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -25,5 +23,7 @@ public class Autor implements IBaseEntity {
     private LocalDateTime rok_urodzenia;
     private String miejsce_urodzenia;
 
+    @OneToMany(mappedBy = "autor", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private Set<Ksiazka> ksiazkaSet;
 }
