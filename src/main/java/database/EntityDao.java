@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class EntityDao {
+    /**
+     * Metoda zapisuje encję do bazy.
+     */
     public void saveOrUpdate(IBaseEntity entity) { // ponieważ grade i student implementują tą klasę
         SessionFactory factory = DatabaseSession.getSessionFactory();
         Transaction transaction = null;
@@ -78,4 +81,3 @@ public class EntityDao {
         return false;
     }
 }
-

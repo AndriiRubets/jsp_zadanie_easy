@@ -22,21 +22,21 @@
         <th style="width: 100px;">Miejsce Urodzenia</th>
         <th style="width: 100px;">Ksiazki</th>
     </tr>
-    <% List<Author> students= (List<Author>) request.getAttribute("authorList");
-        for (int i = 0; i<students.size();i++) {
-            Author s=students.get(i);
+    <% List<Author> authors = (List<Author>) request.getAttribute("authorList");
+        for (int i = 0; i < authors.size(); i++) {
+            Author s = authors.get(i);
 
             out.print("<tr>");
-            out.print("<td>"+s.getId()+"</td>");
-            out.print("<td>"+s.getImie()+"</td>");
-            out.print("<td>"+s.getNazwisko()+"</td>");
-            out.print("<td>"+s.getRok_urodzenia()+"</td>");
-            out.print("<td>"+s.getMiejsce_urodzenia()+"</td>");
+            out.print("<td>" + s.getId() + "</td>");
+            out.print("<td>" + s.getImie() + "</td>");
+            out.print("<td>" + s.getNazwisko() + "</td>");
+            out.print("<td>" + s.getRok_urodzenia() + "</td>");
+            out.print("<td>" + s.getMiejsce_urodzenia() + "</td>");
             out.print("<td>" +
-                    "<a href=\"/author/remove?studentId="+s.getId()+"\">Remove</a>"+
+                    "<a href=\"/author/remove?studentId=" + s.getId() + "\">Remove</a>" +
                     "</td>");
             out.print("<td>" +
-                    "<a href=\"/ksiazka/list?studentId="+s.getId()+"\">Ksiazki</a>"+
+                    "<a href=\"/ksiazka/list?studentId=" + s.getId() + "\">Ksiazki</a>" +
                     "</td>");
             out.print("</tr>");
         }

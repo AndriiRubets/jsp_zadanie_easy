@@ -16,10 +16,9 @@
 <form action="/author/add" method="post">
     Imie:  <input type="text" name="imie"><br>
     Nazwisko:  <input type="text" name="nazwisko"><br>
-    Rok urodzenia: <input type="number" min="1800" max="2000" step="1" name="rok_urodzenia" ><br>
+    Rok urodzenia: <input type="number" min="1800" max="2000" step="1" name="rok_urodzenia"><br>
     Miejsce urodzenia:  <input type="text" name="miejsce_urodzenia"><br>
     <input type="submit">
 </form>
-
 </body>
 </html>

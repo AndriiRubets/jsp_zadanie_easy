@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Set;
 
 @Data
@@ -20,7 +19,7 @@ public class Author implements IBaseEntity {
 
     private String imie;
     private String nazwisko;
-    private LocalDateTime rok_urodzenia;
+    private int rok_urodzenia;
     private String miejsce_urodzenia;
 
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
