@@ -21,11 +21,11 @@ public class PublisherFormServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Publisher wydawnictwo=new Publisher();
-        wydawnictwo.setName( req.getParameter("name"));
-        wydawnictwo.setAddress( req.getParameter("address"));
+        Publisher publisher=new Publisher();
+        publisher.setName( req.getParameter("name"));
+        publisher.setAddress( req.getParameter("address"));
 
-        dao.saveOrUpdate(wydawnictwo);
+        dao.saveOrUpdate(publisher);
         resp.sendRedirect("/publisher/list");
     }
 }

@@ -47,13 +47,11 @@ public class BookFormServlet extends HttpServlet {
             book.setYearOfPublished(Integer.parseInt(req.getParameter("yearOfPublished")));
             book.setTypeOfBook(type);
             book.setAuthor(author);
-            book.setWydawnictwo(publisher);
+            book.setPublisher(publisher);
 
             dao.saveOrUpdate(book);
 
         }
-
-
         resp.sendRedirect("/book/list");
 
         // todo: pobrać ich z bazy i powiązać z książką,

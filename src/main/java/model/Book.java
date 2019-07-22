@@ -23,7 +23,7 @@ public class Book implements IBaseEntity{
     private int pages;
 
     @ManyToOne
-    private Publisher wydawnictwo;
+    private Publisher publisher;
 
     @ManyToOne
     private Author author;
