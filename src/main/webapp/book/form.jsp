@@ -22,7 +22,6 @@
 
     Title of book: <input type="text" name="title"><br>
     Year of Published: <input type="number" min="1800" max="2000" step="1" name="yearOfPublished"><br>
-    Firs Name: <input type="text" name="title"><br>
     Select Type of Book: <select name="typeOfBook">
 
     <%
@@ -36,25 +35,25 @@
 </select><br>
 
     Pages: <input type="number" step="1" min="1" name="pages"><br>
-    Select Author: <select name="authorId">
-    <%
-        List<Author> authors = (List<Author>) request.getAttribute("authors");
-        for (Author a : authors) {
-    %>
-    <option value="<%=a.getFirstname()%>"><%=a.getFirstname() + " " + a.getSurname()%>
-    </option>
 
-    <%
-        }
-    %>
-</select><br>
+
+    Select Author: <select name="authorId">
+        <%
+            List<Author> authors = (List<Author>) request.getAttribute("authors");
+            for (Author a : authors) {
+        %>
+        <option value="<%=a.getId()%>"><%=a.getId()%></option>
+        <%
+            }
+        %>
+    </select><br>
 
     Select Publisher: <select name="publisherId">
     <%
         List<Publisher> publishers = (List<Publisher>) request.getAttribute("publishers");
         for (Publisher p : publishers) {
     %>
-    <option value="<%=p.getName()%>"><%=p.getName()%>
+    <option value="<%=p.getId()%>"><%=p.getId()%>
     </option>
     <%
         }

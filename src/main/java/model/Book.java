@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 
 @Data
@@ -18,7 +17,7 @@ public class Book implements IBaseEntity{
     private Long id;
 
     private String title;
-    private int yearOfManufacture;
+    private int yearOfPublished;
     @Enumerated(EnumType.STRING)
     private TypeOfBooks typeOfBook;
     private int pages;
@@ -28,6 +27,4 @@ public class Book implements IBaseEntity{
 
     @ManyToOne
     private Author author;
-
-
 }

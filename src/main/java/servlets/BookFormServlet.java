@@ -27,7 +27,6 @@ public class BookFormServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/book/form.jsp").forward(req, resp);
 
 
         String selectedAuthorId = req.getParameter("authorId");
@@ -45,14 +44,12 @@ public class BookFormServlet extends HttpServlet {
             Book book = new Book();
             book.setTitle(req.getParameter("title"));
             book.setPages(Integer.parseInt(req.getParameter("pages")));
-            book.setYearOfManufacture(Integer.parseInt(req.getParameter("yearOfManufacture")));
+            book.setYearOfPublished(Integer.parseInt(req.getParameter("yearOfPublished")));
             book.setTypeOfBook(type);
             book.setAuthor(author);
             book.setWydawnictwo(publisher);
-            dao.saveOrUpdate(book);
 
-            author.getBookSet().add(book);
-            dao.saveOrUpdate(author);
+            dao.saveOrUpdate(book);
 
         }
 

@@ -23,7 +23,6 @@
         <th style="width: 100px;">Pages</th>
         <th style="width: 100px;">Publisher</th>
         <th style="width: 100px;">Author</th>
-        <th style="width: 100px;">REMOVE</th>
     </tr>
     <% List<Book> books = (List<Book>) request.getAttribute("bookList");
         for (int i = 0; i < books.size(); i++) {
@@ -32,14 +31,14 @@
             out.print("<tr>");
             out.print("<td>" + b.getId() + "</td>");
             out.print("<td>" + b.getTitle() + "</td>");
-            out.print("<td>" + b.getYearOfManufacture() + "</td>");
+            out.print("<td>" + b.getYearOfPublished() + "</td>");
             out.print("<td>" + b.getTypeOfBook() + "</td>");
             out.print("<td>" + b.getPages() + "</td>");
             out.print("<td>" +
                     "<a href=\"/publisher/list?publisherId=" + b.getId() + "\">Publisher</a>" +
                     "</td>");
             out.print("<td>" +
-                    "<a href=\"/author/remove?authorId=" + b.getId() + "\">Author</a>" +
+                    "<a href=\"/author/list?authorId=" + b.getId() + "\">Author</a>" +
                     "</td>");
             out.print("</tr>");
         }
