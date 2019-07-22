@@ -9,5 +9,11 @@
         <td>
             <a href="/author/list">Author List</a>
         </td>
+        <td>
+            <a href="/publisher/add">Published Form</a>
+        </td>
+        <td>
+            <a href="/publisher/list">Published List</a>
+        </td>
     </tr>
 </table>
