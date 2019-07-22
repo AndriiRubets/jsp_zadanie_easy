@@ -15,5 +15,11 @@
         <td>
             <a href="/publisher/list">Published List</a>
         </td>
+        <td>
+            <a href="/book/add">Book Form</a>
+        </td>
+        <td>
+            <a href="/book/list">Book List</a>
+        </td>
     </tr>
 </table>

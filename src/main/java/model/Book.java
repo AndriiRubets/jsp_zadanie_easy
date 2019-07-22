@@ -18,7 +18,7 @@ public class Book implements IBaseEntity{
     private Long id;
 
     private String title;
-    private LocalDateTime yearOfManufacture;
+    private int yearOfManufacture;
     @Enumerated(EnumType.STRING)
     private TypeOfBooks typeOfBook;
     private int pages;

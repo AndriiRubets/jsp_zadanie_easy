@@ -24,5 +24,5 @@ public class Author implements IBaseEntity {
 
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    private Set<Book> ksiazkaSet;
+    private Set<Book> bookSet;
 }
