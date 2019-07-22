@@ -12,19 +12,19 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ksiazka implements IBaseEntity{
+public class Book implements IBaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String tytul;
-    private LocalDateTime rok_wydania;
+    private String title;
+    private LocalDateTime yearOfManufacture;
     @Enumerated(EnumType.STRING)
-    private TypKsiazki typKsiazki;
-    private int iloscStron;
+    private TypeOfBooks typeOfBook;
+    private int pages;
 
     @ManyToOne
-    private Wydawnictwo wydawnictwo;
+    private Publisher wydawnictwo;
 
     @ManyToOne
     private Author author;

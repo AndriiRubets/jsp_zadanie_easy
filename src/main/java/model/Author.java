@@ -17,12 +17,12 @@ public class Author implements IBaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String imie;
-    private String nazwisko;
-    private int rok_urodzenia;
-    private String miejsce_urodzenia;
+    private String firstname;
+    private String surname;
+    private int yearOfBirth;
+    private String placeOfBirth;
 
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    private Set<Ksiazka> ksiazkaSet;
+    private Set<Book> ksiazkaSet;
 }

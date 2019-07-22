@@ -2,7 +2,7 @@ package servlets;
 
 
 import database.EntityDao;
-import model.Wydawnictwo;
+import model.Publisher;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,9 +21,9 @@ public class PublisherFormServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Wydawnictwo wydawnictwo=new Wydawnictwo();
-        wydawnictwo.setNazwa( req.getParameter("nazwa"));
-        wydawnictwo.setAdres( req.getParameter("adres"));
+        Publisher wydawnictwo=new Publisher();
+        wydawnictwo.setName( req.getParameter("name"));
+        wydawnictwo.setAddress( req.getParameter("address"));
 
         dao.saveOrUpdate(wydawnictwo);
         resp.sendRedirect("/publisher/list");

@@ -13,11 +13,11 @@ import javax.persistence.Id;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Wydawnictwo implements IBaseEntity{
+public class Publisher implements IBaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String nazwa;
-    private String adres;
+    private String name;
+    private String address;
 }

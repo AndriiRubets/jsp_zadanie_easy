@@ -1,6 +1,6 @@
 package model;
 
-public enum TypKsiazki {
+public enum TypeOfBooks {
     PRZYGOTOWA,
     AKCJI,
     NAUKOWA

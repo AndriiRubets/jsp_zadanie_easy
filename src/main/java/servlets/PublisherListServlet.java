@@ -1,8 +1,7 @@
 package servlets;
 
 import database.EntityDao;
-import model.Author;
-import model.Wydawnictwo;
+import model.Publisher;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +16,7 @@ public class PublisherListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("publisherList", dao.findAll(Wydawnictwo.class) );
+        req.setAttribute("publisherList", dao.findAll(Publisher.class) );
         req.getRequestDispatcher("/publisher/list.jsp").forward(req,resp);
     }
 }

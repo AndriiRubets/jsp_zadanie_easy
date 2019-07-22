@@ -25,10 +25,10 @@ public class AuthorFormServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Author author = new Author();
-        author.setImie( req.getParameter("imie"));
-        author.setNazwisko(req.getParameter("nazwisko"));
-        author.setRok_urodzenia(Integer.parseInt(req.getParameter("rok_urodzenia")));
-        author.setMiejsce_urodzenia(req.getParameter("miejsce_urodzenia"));
+        author.setFirstname( req.getParameter("firstname"));
+        author.setSurname(req.getParameter("surname"));
+        author.setYearOfBirth(Integer.parseInt(req.getParameter("yearOfBirth")));
+        author.setPlaceOfBirth(req.getParameter("placeOfBirth"));
 
         dao.saveOrUpdate(author);
         resp.sendRedirect("/author/list");

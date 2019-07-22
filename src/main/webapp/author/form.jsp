@@ -14,10 +14,10 @@
 <jsp:include page="/header.jsp"></jsp:include>
 
 <form action="/author/add" method="post">
-    Imie:  <input type="text" name="imie"><br>
-    Nazwisko:  <input type="text" name="nazwisko"><br>
-    Rok urodzenia: <input type="number" min="1800" max="2000" step="1" name="rok_urodzenia"><br>
-    Miejsce urodzenia:  <input type="text" name="miejsce_urodzenia"><br>
+    Firs Name:  <input type="text" name="firstname"><br>
+    Surname:  <input type="text" name="surname"><br>
+    Year of Birth: <input type="number" min="1800" max="2000" step="1" name="yearOfBirth"><br>
+    Place of Birth:  <input type="text" name="placeOfBirth"><br>
     <input type="submit">
 </form>
 </body>

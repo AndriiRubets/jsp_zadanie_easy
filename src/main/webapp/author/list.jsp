@@ -16,11 +16,12 @@
 <table>
     <tr>
         <th style="width: 100px;">ID</th>
-        <th style="width: 100px;">Imie</th>
-        <th style="width: 100px;">Nazwisko</th>
-        <th style="width: 100px;">Rok Urodzenia</th>
-        <th style="width: 100px;">Miejsce Urodzenia</th>
-        <th style="width: 100px;">Ksiazki</th>
+        <th style="width: 100px;">Firs Name</th>
+        <th style="width: 100px;">Surname</th>
+        <th style="width: 100px;">Year of Birth</th>
+        <th style="width: 100px;">Place of Birth</th>
+        <th style="width: 100px;">REMOVE</th>
+        <th style="width: 100px;">Books</th>
     </tr>
     <% List<Author> authors = (List<Author>) request.getAttribute("authorList");
         for (int i = 0; i < authors.size(); i++) {
@@ -28,15 +29,15 @@
 
             out.print("<tr>");
             out.print("<td>" + s.getId() + "</td>");
-            out.print("<td>" + s.getImie() + "</td>");
-            out.print("<td>" + s.getNazwisko() + "</td>");
-            out.print("<td>" + s.getRok_urodzenia() + "</td>");
-            out.print("<td>" + s.getMiejsce_urodzenia() + "</td>");
+            out.print("<td>" + s.getFirstname() + "</td>");
+            out.print("<td>" + s.getSurname() + "</td>");
+            out.print("<td>" + s.getYearOfBirth() + "</td>");
+            out.print("<td>" + s.getPlaceOfBirth() + "</td>");
             out.print("<td>" +
                     "<a href=\"/author/remove?studentId=" + s.getId() + "\">Remove</a>" +
                     "</td>");
             out.print("<td>" +
-                    "<a href=\"/ksiazka/list?studentId=" + s.getId() + "\">Ksiazki</a>" +
+                    "<a href=\"/book/list?studentId=" + s.getId() + "\">Books</a>" +
                     "</td>");
             out.print("</tr>");
         }

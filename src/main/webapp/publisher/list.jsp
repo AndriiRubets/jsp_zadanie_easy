@@ -1,6 +1,6 @@
 <%@ page import="model.Author" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.Wydawnictwo" %><%--
+<%@ page import="model.Publisher" %><%--
   Created by IntelliJ IDEA.
   User: ar
   Date: 21.07.2019
@@ -17,19 +17,19 @@
 <table>
     <tr>
         <th style="width: 100px;">ID</th>
-        <th style="width: 100px;">Nazwa</th>
-        <th style="width: 100px;">Adres</th>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 100px;">Address</th>
     </tr>
-    <% List<Wydawnictwo> wydawnictwos = (List<Wydawnictwo>) request.getAttribute("publisherList");
-        for (int i = 0; i < wydawnictwos.size(); i++) {
-            Wydawnictwo s = wydawnictwos.get(i);
+    <% List<Publisher> publishers = (List<Publisher>) request.getAttribute("publisherList");
+        for (int i = 0; i < publishers.size(); i++) {
+            Publisher p = publishers.get(i);
 
             out.print("<tr>");
-            out.print("<td>" + s.getId() + "</td>");
-            out.print("<td>" + s.getNazwa() + "</td>");
-            out.print("<td>" + s.getNazwa() + "</td>");
+            out.print("<td>" + p.getId() + "</td>");
+            out.print("<td>" + p.getName() + "</td>");
+            out.print("<td>" + p.getAddress() + "</td>");
             out.print("<td>" +
-                    "<a href=\"/published/remove?publishedId=" + s.getId() + "\">Remove</a>" +
+                    "<a href=\"/published/remove?publishedId=" + p.getId() + "\">Remove</a>" +
                     "</td>");
             out.print("</tr>");
         }

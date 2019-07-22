@@ -14,8 +14,8 @@
 <jsp:include page="/header.jsp"></jsp:include>
 
 <form action="/publisher/add" method="post">
-    Nazwa:  <input type="text" name="nazwa"><br>
-    Address:  <input type="text" name="adres"><br>
+    Name:  <input type="text" name="name"><br>
+    Address:  <input type="text" name="address"><br>
     <input type="submit">
 </form>
 </body>
